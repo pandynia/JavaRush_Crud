@@ -1,4 +1,4 @@
-package com.spr.exception;
+package org.pandynia.javarush.exception;
 
 public class UsersNotFound  extends Exception{
 

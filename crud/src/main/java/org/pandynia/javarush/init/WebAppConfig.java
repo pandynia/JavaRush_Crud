@@ -1,4 +1,4 @@
-package com.spr.init;
+package org.pandynia.javarush.init;
 
 import java.util.Properties;
 

@@ -1,4 +1,4 @@
-package com.spr.repository;
+package org.pandynia.javarush.repository;
 
 import java.util.List;
 

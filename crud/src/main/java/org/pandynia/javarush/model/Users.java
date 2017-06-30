@@ -1,4 +1,4 @@
-package com.spr.model;
+package org.pandynia.javarush.model;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.spr.service;
+package org.pandynia.javarush.service;
 
 import java.util.List;
 

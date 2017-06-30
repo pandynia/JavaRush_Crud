@@ -1,4 +1,4 @@
-package com.spr.controller;
+package org.pandynia.javarush.controller;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
