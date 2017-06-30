@@ -11,10 +11,9 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.spr.exception.ShopNotFound;
-import com.spr.exception.UsersNotFound;
-import com.spr.model.Users;
-import com.spr.repository.UsersRepository;
+import org.pandynia.javarush.exception.UsersNotFound;
+import org.pandynia.javarush.model.Users;
+import org.pandynia.javarush.repository.UsersRepository;
 
 @Service
 public class UsersServiceImpl implements UsersService {
@@ -28,7 +27,7 @@ public class UsersServiceImpl implements UsersService {
 		return usersRepository.findAll(request);
 	}
 	
-	@Override
+	//@Override
 	@Transactional
 	public Users create(Users users) {
 		// TODO Auto-generated method stub		
@@ -36,20 +35,20 @@ public class UsersServiceImpl implements UsersService {
 		return usersRepository.save(createdUsers);		
 	}
 	
-	@Override
+	//@Override
 	@Transactional
 	public Users findById(int id) {
 		return usersRepository.findOne(id);
 	}
 	
-	@Override
+	//@Override
 	public List<Users> findByName(String name) {
 		// TODO Auto-generated method stub
 		return usersRepository.findName(name);
 	}
 
 
-	@Override
+	//@Override
 	@Transactional(rollbackFor=UsersNotFound.class)	
 	public Users delete(int id) throws UsersNotFound {
 		Users deletedUsers = usersRepository.findOne(id);
@@ -61,14 +60,14 @@ public class UsersServiceImpl implements UsersService {
 		return deletedUsers;		
 	}
 
-	@Override
+	//@Override
 	@Transactional
 	public List<Users> findAll() {
 		return usersRepository.findAll();
 	}
 
-	@Override
-	@Transactional(rollbackFor=ShopNotFound.class)
+	//@Override
+	@Transactional(rollbackFor=UsersNotFound.class)
 	public Users update(Users users) throws UsersNotFound {		
 		Users updatedUsers = usersRepository.findOne(users.getId());
 		
@@ -81,6 +80,4 @@ public class UsersServiceImpl implements UsersService {
 		updatedUsers.setCreatedDate(users.getCreatedDate());
 		return updatedUsers;
 	}
-
-
 }

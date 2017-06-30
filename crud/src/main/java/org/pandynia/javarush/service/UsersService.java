@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.data.domain.Page;
 
-import com.spr.exception.UsersNotFound;
-import com.spr.model.Users;
+import org.pandynia.javarush.exception.UsersNotFound;
+import org.pandynia.javarush.model.Users;
 
 public interface UsersService {
 	

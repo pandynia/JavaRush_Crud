@@ -24,10 +24,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.spr.exception.UsersNotFound;
-import com.spr.model.Users;
-import com.spr.service.UsersService;
-import com.spr.validation.UsersValidator;
+import org.pandynia.javarush.exception.UsersNotFound;
+import org.pandynia.javarush.model.Users;
+import org.pandynia.javarush.service.UsersService;
+import org.pandynia.javarush.validation.UsersValidator;
 
 @Controller
 @RequestMapping(value="/users")

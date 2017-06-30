@@ -5,18 +5,18 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import com.spr.model.Users;
+import org.pandynia.javarush.model.Users;
 
 @Component
 public class UsersValidator implements Validator{
 	private final static String USERS_NAME = "name";
 
-	@Override
+	//@Override
 	public boolean supports(Class<?> clazz) {
 		return Users.class.isAssignableFrom(clazz);
 	}
 
-	@Override
+	//@Override
 	public void validate(Object target, Errors errors) {
 		Users users = (Users) target;
 		
