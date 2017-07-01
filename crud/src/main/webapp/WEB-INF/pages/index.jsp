@@ -8,11 +8,14 @@
 </head>
 <body>
 <h1>Home page</h1>
+
 <p>
-Welcome to "Users management application".<br/>
+Welcome to "Users application".<br/>
 <i>${message}</i><br/>
-<a href="${pageContext.request.contextPath}/shop/create.html">Create a new shop</a><br/>
-<a href="${pageContext.request.contextPath}/shop/list.html">View all shops</a><br/>
+<a href="${pageContext.request.contextPath}/users/create.html">Create a new shop</a><br/>
+<a href="${pageContext.request.contextPath}/users/list.html">View all shops</a><br/>
+<a href="${pageContext.request.contextPath}/users/search.html">Search users</a><br/>
+<a href="${pageContext.request.contextPath}/users/pages/1.html">Search users</a><br/>
 </p>
 </body>
 </html>
