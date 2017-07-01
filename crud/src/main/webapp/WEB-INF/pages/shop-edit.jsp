@@ -5,35 +5,22 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Edit Users page</title>
+<title>Edit Shop page</title>
 </head>
 <body>
-<h1>Edit Users page</h1>
-<form:form method="POST" commandName="users" action="${pageContext.request.contextPath}/users/edit/${users.id}.html" >
+<h1>Edit Shop page</h1>
+<form:form method="POST" commandName="shop" action="${pageContext.request.contextPath}/shop/edit/${shop.id}.html" >
 <table>
 <tbody>
 <tr>
-<td>User name:</td>
-
+<td>Shop name:</td>
 <td><form:input path="name" /></td>
 <td><form:errors path="name" cssStyle="color: red;"/></td>
 </tr>
-
 <tr>
-<td>User age:</td>
-<td><form:input path="age" /></td>
-<td><form:errors path="age" cssStyle="color: red;"/></td>
-</tr>
-
-<tr>
-<td>Is user admin:</td>
-<td><form:checkbox path="admin" /></td>
-</tr>
-
-<tr>
-<td>User's date of creation:</td>
-<td><form:input path="createdDate" /></td>
-<td><form:errors path="createdDate" cssStyle="color: red;"/></td>
+<td>Employees number:</td>
+<td><form:input path="emplNumber" /></td>
+<td><form:errors path="emplNumber" cssStyle="color: red;"/></td>
 </tr>
 <tr>
 <td><input type="submit" value="Edit" /></td>

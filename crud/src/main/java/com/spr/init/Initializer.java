@@ -1,4 +1,4 @@
-package org.pandynia.javarush.init;
+package com.spr.init;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

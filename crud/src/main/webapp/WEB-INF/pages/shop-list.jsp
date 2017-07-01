@@ -5,32 +5,25 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>User List page</title>
+<title>Shop List page</title>
 </head>
 <body>
-<h1>User List page</h1>
+<h1>Shop List page</h1>
 <table style="text-align: center;" border="1px" cellpadding="0" cellspacing="0" >
 <thead>
 <tr>
-<th width="25px">id</th>
-<th width="150px">name</th>
-<th width="25px">age</th>
-<th width="50px">is admin</th>
-<th width="150px">createdDate</th>
-<th width="100px">Actions</th>
+<th width="25px">id</th><th width="150px">company</th><th width="25px">employees</th><th width="50px">actions</th>
 </tr>
 </thead>
 <tbody>
-<c:forEach var="users" items="${usersList}">
+<c:forEach var="shop" items="${shopList}">
 <tr>
-<td>${users.id}</td>
-<td>${users.name}</td>
-<td>${users.age}</td>
-<td>${users.admin}</td>
-<td>${users.createdDate}</td>
+<td>${shop.id}</td>
+<td>${shop.name}</td>
+<td>${shop.emplNumber}</td>
 <td>
-<a href="${pageContext.request.contextPath}/users/edit/${users.id}.html">Edit</a><br/>
-<a href="${pageContext.request.contextPath}/users/delete/${users.id}.html">Delete</a><br/>
+<a href="${pageContext.request.contextPath}/shop/edit/${shop.id}.html">Edit</a><br/>
+<a href="${pageContext.request.contextPath}/shop/delete/${shop.id}.html">Delete</a><br/>
 </td>
 </tr>
 </c:forEach>
