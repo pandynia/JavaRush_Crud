@@ -10,8 +10,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import com.spr.exception.ShopNotFound;
 import com.spr.exception.UsersNotFound;
 import com.spr.model.Users;
 import com.spr.repository.UsersRepository;
@@ -68,7 +66,7 @@ public class UsersServiceImpl implements UsersService {
 	}
 
 	//@Override
-	@Transactional(rollbackFor=ShopNotFound.class)
+	@Transactional(rollbackFor=UsersNotFound.class)
 	public Users update(Users users) throws UsersNotFound {		
 		Users updatedUsers = usersRepository.findOne(users.getId());
 		

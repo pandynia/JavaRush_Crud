@@ -13,6 +13,7 @@ public interface UsersService {
 	public Users delete(int id) throws UsersNotFound;
 	public List<Users> findAll();
 	public Users update(Users users) throws UsersNotFound;
+	
 	public Users findById(int id);
 	public List<Users> findByName(String name);	
 	public Page<Users> getUsersPages(Integer pageNumber);
