@@ -73,16 +73,6 @@ public class UsersController {
 		return mav;		
 	}
 	
-	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public ModelAndView usersListPage() {
-		ModelAndView mav = new ModelAndView("users-list");
-		List<Users> usersList = usersService.findAll();
-		//List<Users> usersList = usersService.findByName("R");
-		mav.addObject("usersList", usersList);
-		return mav;
-	}
-	
-	
 	@RequestMapping(value="/pages/{pageNumber}", method=RequestMethod.GET)
 	public ModelAndView usersListPaging(@PathVariable Integer pageNumber) {
 		Page<Users> page = usersService.getUsersPages(pageNumber);
@@ -119,12 +109,6 @@ public class UsersController {
 		return mav;
 	}
 	
-	@RequestMapping(value="/search", method=RequestMethod.GET)
-	public ModelAndView usersListSearchPage() {						
-		ModelAndView mav = new ModelAndView("users-search");
-		return mav;
-	}
-
 	@RequestMapping(value="/edit/{id}", method=RequestMethod.GET)
 	public ModelAndView editUsersPage(@PathVariable Integer id) {
 		ModelAndView mav = new ModelAndView("users-edit");

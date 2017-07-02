@@ -28,7 +28,7 @@ public class UsersServiceImpl implements UsersService {
 		return usersRepository.findAll(request);
 	}
 	
-	@Override
+	//@Override
 	@Transactional
 	public Users create(Users users) {
 		// TODO Auto-generated method stub		
@@ -36,20 +36,20 @@ public class UsersServiceImpl implements UsersService {
 		return usersRepository.save(createdUsers);		
 	}
 	
-	@Override
+	//@Override
 	@Transactional
 	public Users findById(int id) {
 		return usersRepository.findOne(id);
 	}
 	
-	@Override
+	//@Override
 	public List<Users> findByName(String name) {
 		// TODO Auto-generated method stub
 		return usersRepository.findName(name);
 	}
 
 
-	@Override
+	//@Override
 	@Transactional(rollbackFor=UsersNotFound.class)	
 	public Users delete(int id) throws UsersNotFound {
 		Users deletedUsers = usersRepository.findOne(id);
@@ -61,13 +61,13 @@ public class UsersServiceImpl implements UsersService {
 		return deletedUsers;		
 	}
 
-	@Override
+	//@Override
 	@Transactional
 	public List<Users> findAll() {
 		return usersRepository.findAll();
 	}
 
-	@Override
+	//@Override
 	@Transactional(rollbackFor=ShopNotFound.class)
 	public Users update(Users users) throws UsersNotFound {		
 		Users updatedUsers = usersRepository.findOne(users.getId());

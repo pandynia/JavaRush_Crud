@@ -12,10 +12,8 @@
 <p>
 Welcome to "Users application".<br/>
 <i>${message}</i><br/>
-<a href="${pageContext.request.contextPath}/users/create.html">Create a new shop</a><br/>
-<a href="${pageContext.request.contextPath}/users/list.html">View all shops</a><br/>
-<a href="${pageContext.request.contextPath}/users/search.html">Search users</a><br/>
-<a href="${pageContext.request.contextPath}/users/pages/1.html">Search users</a><br/>
+<a href="${pageContext.request.contextPath}/users/create.html">Create a new user</a><br/>
+<a href="${pageContext.request.contextPath}/users/pages/1.html">View and search users</a><br/>
 </p>
 </body>
 </html>
